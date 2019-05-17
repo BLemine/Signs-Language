@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signs_language"
+    tools:context=".MenuChoix">
+
+    <ImageView
+        android:id="@+id/writeOption"
+        android:layout_width="108dp"
+        android:layout_height="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="TODO"
+        android:gravity="center"
+        android:onClick="writeTypeOption"
+        android:src="@drawable/writetype"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/writetype"
+        />
+
+    <ImageView
+        android:id="@+id/signsOption"
+        android:layout_width="105dp"
+        android:layout_height="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="TODO"
+        android:gravity="center"
+        android:onClick="signsTypeOption"
+        android:src="@drawable/signs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/signs"
+         />
+
+</android.support.constraint.ConstraintLayout>
