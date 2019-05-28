@@ -1,0 +1,42 @@
+AUTEUR : BAILLAHI Mohamedlemine.
+
+TÂCHES : 
+- transformation son-texte (méthode asynchrone) : BAILLAHI Mohamedlemine
+- transformation son-texte (méthode synchrone) : BAILLAHI Mohamedlemine
+- transformation texte-vidéo (juste les mots) : AJILI Salah
+- transformation texte-vidéo (les mots et les phrases) : AJILI Salah & BAILLAHI Mohamedlemine
+- transformation video-fichier audio : DAKIR Abdelati
+- transformation fichier audio-vidéo : CHENGLY Elmehdi & DAKIR Abdelati
+
+************************ LA TRANSFORMATION AUDIO VERS TEXT ( DEUX TYPES - responsable: BAILLAHI ) : ******************************
+Les Outils possibles : 
+		- Javascript embarqué dans android : cette méthode demande l'utilisation du composant WebView dans android mais jusqu'à maitenant elle ne supporte
+			pas Web speech Api (cet API est utilisé déjà par la communauté google chrome avec javascript), donc c'est pas du tout utile.
+		- Google Cloud API : cette méthode n'est pas gratuite et demande une connexion internet, donc c'est rejeté.
+		- IBM watson API : cette méthode demande une connexion internet, donc c'est rejeté.
+		- Youtube API : demande une connexion internet, donc c'est rejeté.
+		- python : (la description sera donnée par DAKIR Abdelati)
+		- Google speech API : c'est une solution 100% native, gratuite et off-line.
+
+Le choix de l'Outil : Google speech API.
+
+Introduction : à fin d'aider les personnes malentendants ou les personnes sourdes, on a décidé de créer une application qui transforme un audio reçus
+               par le micro vers du texte qu'on peut manipuler de façon subjective et dynamique selon les cas d'utilisation, pour ceci on a pu trouvé
+							 deux méta-méthodes pour cette transcription :
+							     - transformation vers texte après avoir que l'utilisateur termine sa parole et ceci c'est à travers une utilisation directe de l'API
+										 "google speech recognizer" qui est installé dans chaque téléphone android mais qu'on a modifié et l'ameliorer selon notre 
+											conception,vous pouvez trouver tout ces cas dans mon github vu que s'étais l'une de mes tâches dans le lien : https://github.com/BLemine
+							     - transformation synchronisée totalement synchronisée ç-à-d : tantque l'utilisateur parle le texte s'affiche en meme temps 
+										 	avec la parole de l'utilisateur c'est la méthode la plus efficace et la plus rapide.
+
+Le choix de la méthode : Après avoir vu les méthodes ci-dessus, vous allez bien sur choisir la deuxième vu sa rapidité et sa robustesse, mais en fait 
+												le choix de la méthode doit se baser sur le type de traitement qu'on va faire sur le texte recupéré après la transformation du
+												son vers texte, du coup et puisqu'on va recupérer le texte pour le traduire vers des signes à l'aide des vidéos ce qui par la 
+												suite demande un timeout entre chaque vidéo alors la première méthode sera la plus utile (sauf si on adopte un modèle
+												de deep learning qui va rendre le traitement plus legé), du coup on a adopté la première méthode dans ce cas mais en laissant
+												la deuxième méthode comme deuxième option pour les malentendants qui savent lire car on va dans cette deuxième option afficher
+												le texte recupéré au lieu d'afficher les signes.
+
+La première méthode : à l'aide de l'utilisation de l'API intégré "google speech recognizer" ( vous pouvez trouvez la documentation dans : 
+												https://developer.android.com/reference/android/speech/SpeechRecognizer) en l'améliorant dans la partie de la conception de
+												front pour recevoir tout le son après avoir terminé la parole, il donne deux seconds de silence pour recupérer la dite parole

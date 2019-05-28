@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Signs Language</string>
+    <string name="writeOption">TODO</string>
+    <string name="togglebutton">ToggleButton</string>
+</resources>
